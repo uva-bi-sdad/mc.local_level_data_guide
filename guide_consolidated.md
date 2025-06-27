@@ -1,5 +1,5 @@
 ---
-title: "Guide to Creating Combined Local-Level Geographic Datasetst"
+title: "Guide to Creating Combined Local-Level Geographic Datasets"
 format:
   pdf:
     toc: false
@@ -27,33 +27,13 @@ Local government officials require data for geographies that correspond to their
 
 The imperative for purpose-built datasets becomes particularly acute when considering that many of the most pressing local policy challenges operate across multiple traditional boundary systems. For instance, addressing transportation equity requires understanding commuting patterns that span multiple census tracts and ZIP codes\[47\]. Tackling neighborhood-level health disparities requires data aggregation that reflects actual community boundaries rather than statistical convenience\[48\]. Economic development initiatives often need to target specific commercial corridors or industrial zones that bear no relationship to census geography\[49\].
 
-### The Geographic Boundary Misalignment Problem
-
-However, constructing these purpose-built sub-county datasets presents significant methodological challenges, chief among them the pervasive problem of geographic boundary misalignment. This fundamental issue, known in geographic research as the **Modifiable Areal Unit Problem (MAUP)**, occurs when spatial data aggregated into different boundary systems produces varying analytical results despite representing the same underlying phenomena\[50\].
-
-The misalignment challenge manifests in multiple dimensions. **Temporal misalignment** occurs because different boundary systems change on different schedules - census tract boundaries are redrawn every decade, ZIP code boundaries change frequently based on postal service operational needs, municipal boundaries shift through annexation and incorporation, while school district boundaries may remain stable for years before sudden major reorganization\[51\]\[52\]. This creates substantial difficulties in constructing longitudinal datasets that can track policy outcomes over time, as what appears to be change may actually reflect boundary modifications rather than real substantive shifts\[53\].
-
-**Spatial non-correspondence** represents an even more complex challenge, where different boundary systems simply do not align geographically. ZIP codes, designed for mail delivery efficiency, cut across multiple municipalities and census tracts with no regard for local government jurisdictions\[54\]\[48\]. A single school district may span three counties and encompass parts of more than a dozen ZIP codes\[45\]. Census tracts, while designed to be relatively stable, follow visible features and governmental boundaries that may not reflect the social or economic geography relevant to policy interventions\[55\].
-
-**Functional misalignment** occurs when administrative boundaries fail to capture the actual geographic scope of the phenomena being studied or the policy interventions being planned. A neighborhood experiencing gentrification may span multiple census tracts, making it impossible to accurately measure displacement using standard geographic units. A metro corridor targeted for transit-oriented development may include portions of several ZIP codes, making it difficult to assess the impact of zoning changes or infrastructure investments using existing data aggregation approaches.
-
-**Scale dependency** further complicates the boundary alignment problem, as the choice of geographic unit fundamentally alters analytical results. Research has demonstrated that up to 49 percent of a population can have their actual municipality misclassified when ZIP codes are used as proxies for local government jurisdiction\[48\]. Studies examining historical redlining effects find that sensitivity rates for correctly identifying affected neighborhoods can vary from 44 percent to 77 percent depending on which census geography is used and which alignment method is employed\[55\].
-
-These boundary misalignment problems are not merely technical inconveniences but create systematic biases in policy analysis and resource allocation. When local governments rely on misaligned data to identify service needs, they may consistently under-serve areas where problems are masked by boundary aggregation effects, or over-serve areas where problems appear more severe due to how boundaries happen to divide the underlying geography. The **Flint Water Crisis** represents a stark example of how geographic misalignment can have life-or-death consequences, where ZIP code-based analysis would have failed to identify the precise neighborhoods affected by contaminated water systems\[48\].
-
-Furthermore, the costs of addressing boundary misalignment through sophisticated interpolation or re-aggregation techniques often exceed the capacity of local government policy analysis units. While academic researchers and federal agencies may have the resources to employ complex spatial statistical methods to harmonize data across boundary systems\[56\]\[53\], local decision makers typically need accessible, interpretable data that can inform immediate policy decisions without requiring advanced GIS expertise or computational resources.
-
-The result is that local government policy analysts face an impossible choice: use readily available but potentially misleading data aggregated to inappropriate geographic boundaries, or forgo quantitative analysis altogether in favor of less systematic approaches to policy development. Neither option serves the ultimate goal of evidence-based local governance that can effectively address the spatially-specific challenges facing communities across the United States.
-
-## Introduction: The Challenge of Misaligned Geographic Boundaries
+## The Challenge of Misaligned Geographic Boundaries
 
 Local government policy analysts frequently encounter a fundamental challenge when working with geospatial data: datasets are often aggregated at different geographic scales that do not align with each other or with the specific geographic units of policy interest. This misalignment creates what geographers call the "Modifiable Areal Unit Problem" (MAUP), where the boundaries used for data collection may not correspond to the boundaries that are most meaningful for policy analysis or community engagement\[82\].
 
 Consider a scenario where a local government wants to understand how internet connectivity (broadband speeds) relates to socioeconomic conditions (median household income) within the context of neighborhood-level civic engagement and representation. Such an analysis is particularly relevant for Arlington County, Virginia, where 62 distinct civic associations serve as important channels for community input and local governance\[83\]\[84\]. These civic associations represent genuine neighborhood identities and community interests that cross-cut the administrative boundaries used by federal agencies for data collection and reporting.
 
-\[Map Insert Location 1: A map showing Arlington County with civic association boundaries overlaid on a base map, demonstrating how these boundaries differ from typical census geographies\]
-
-![The goal is to transform both Ookla Broadband Speed data (left) and American Community Survey Household Income data (center) into Arlington County Civic Association geographies (right)](images/3plots.png){style="color: gray;" fig-align="center"}
+![The goal is to transform both Ookla Broadband Speed data (left) and American Community Survey Household Income data (center) into Arlington County Civic Association geographies (right)](images/3plots.png)
 
 The challenge becomes apparent when we consider the geographic scales at which different types of data are available:
 
