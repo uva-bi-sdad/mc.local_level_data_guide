@@ -5,6 +5,7 @@ format:
     toc: false
     number-sections: false
     colorlinks: true
+    keep-tex: true
 ---
 
 # Guide to Creating Combined Local-Level Geographic Datasets
