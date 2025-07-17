@@ -526,10 +526,16 @@ The approach for ACS data involves a two-step process:
   units{[}105{]}.
 \end{enumerate}
 
-{[}Diagram Insert Location 1: A flowchart showing the data
-transformation process from source geographies to target geography{]}
+\begin{figure}[H]
 
-\pandocbounded{\includegraphics[keepaspectratio]{images/ACS Data Transform.png}}
+{\centering \pandocbounded{\includegraphics[keepaspectratio]{images/census_to_civ_assoc.png}}
+
+}
+
+\caption{Census block group data must be disaggregated to individual residences before being re-aggregated up to the desired geography.}
+
+\end{figure}%
+
 
 This two-step approach is necessary because: - ACS data is not available
 at the census block level for most variables - Census blocks provide a
